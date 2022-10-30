@@ -1,0 +1,48 @@
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display --> 
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ site.url }}">{{ site.title }}</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      {%- assign default_paths = site.pages | map: "path" -%}
+      {%- assign page_paths = site.header_pages | default: default_paths -%}
+      {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+      <ul class="nav navbar-nav navbar-right">
+        <!-- COMMENT: ok so this is a bit of a frankenstein of minima theme and this... the <li page-scroll class makes the text white and I don't know what else. -->
+        {%- for path in page_paths -%}
+          {%- assign my_page = site.pages | where: "path", path | first -%}
+          {%- if my_page.title -%}
+            <li class="page-scroll">
+              <a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+        <!-- COMMENT This is what it used to be: -->
+        <!-- <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li class="page-scroll">
+          <a href="#portfolio">Portfolio</a>
+        </li>
+        <li class="page-scroll">
+          <a href="#about">About</a>
+        </li>
+        <li class="page-scroll">
+          <a href="#contact">Contact</a>
+        </li> -->
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
