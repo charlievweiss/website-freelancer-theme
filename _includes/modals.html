@@ -20,9 +20,9 @@
             <p>{{ post.description }}</p>
             {% endif %}
             <ul class="list-inline item-details">
-              {% if post.client %}
-              <li>Client:
-                <strong>{{ post.client }}</strong>
+              {% if post.org %}
+              <li>Organization:
+                <strong>{{ post.org }}</strong>
               </li>
               {% endif %}
               {% if post.project-date %}
@@ -36,6 +36,11 @@
               </li>
               {% endif %}
             </ul>
+            {% if post.more %}
+            <p><a href="{{ site.url}}{{ post.url }}">Click here to learn more</a></p>
+            {% else %}
+            <p>Details coming soon</p>
+            {% endif %}
             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
               Close</button>
           </div>
