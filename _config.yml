@@ -1,8 +1,8 @@
 # Site settings :)
-title: Site title!
-email: your-email@domain.com
-url: https://github.com/jeromelachaud/freelancer-theme
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+title: Charlie Weiss Sharman
+email: charlievweiss@gmail.com
+url: https://charlieweiss.info
+description: "Charlie Weiss Sharman portfolio website"
 keywords: "your keywords, separated by commas"
 skills: "Environment (Wetlands) - Engineering - Art"
 meta_author: LastName FirstName
@@ -27,7 +27,7 @@ disqus_shortname: myshortname
 color:
 # cool earthy
   primary: 7ca982 #behind picture
-  primary-rgb: 7ca982 #"128,179,255"
+  primary-rgb: "49,66,51" #"128,179,255"
   secondary: 292f36 #top bar and words
   secondary-dark: 292f36 #bottom bar
   # # cool earthy
@@ -43,7 +43,7 @@ color:
 
 # Footer settings
 footer:
-  copyright: Charlie Weiss
+  copyright: Charlie Weiss Sharman
   location: Location
   social: Around the Web
   credits: Credits
